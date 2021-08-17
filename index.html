@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>脳に汗をかくプログラム体験</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https:cdn.jsdeliver.net/npm/vue@2.6.16/dist/vue.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    //ブラウザ上に表示される部分のHTMLはbodyタグ内のここに記述してください。
+    <body>
+       
+        <div id="app">
+            <p>{{ addText }}</p>
+
+            <input type="text" v-model="addText" placeholder="ToDoを入力">
+            <button v-on:click="addToDo()">追加</button>
+ 
+            <ul v-for="todo in list">
+                <li>{{ todo.id }}:{{ todo.text }}
+                <button v-on:click="deleteToDo(todo.id)">削除</button></li>
+            </ul>
+	    
+        </div>
+
+        
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="../js/index.js"></script>
+</body>
+
+</html>
